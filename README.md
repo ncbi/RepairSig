@@ -42,7 +42,7 @@ Here, `M` and `P` are the identifiers of the corresponding tensors and `G`, `K`,
 Note that `X=G*K*L` and `Y=N*K`.
 
 ## Optimization Strategy
-
+ 
 RepairSig uses a default optimization strategy for its Adam optimizer as follows
 
 |No. Epochs| Stepsize|
