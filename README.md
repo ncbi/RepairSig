@@ -15,7 +15,7 @@ usage: python repairsig.py [-h] [--noweights]  [-o OUT] -i INPUT -J MMR
 
 Arguments:
   -h, --help                show this help message and exit
-  -J MMR, --MMR MMR         Number of expected MMR signatures.
+  -J MMR, --MMR MMR         Expected number of DNA repair deficiency signatures.
   --noweights               No weights for genomic regions, i.e. set W and R to 1. Do not optimize W and R.
   -o OUT, --out OUT         path to the output file into which the trained tensors will be written
   -i INPUT, --input INPUT   path to the input file containing the given tensors
