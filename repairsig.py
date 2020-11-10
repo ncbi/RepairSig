@@ -14,7 +14,7 @@ from numpy import genfromtxt
 import argparse
 parser = argparse.ArgumentParser()
 
-parser.add_argument('-J', '--MMR', default=2, required=True, help='Number of expected MMR signatures.')
+parser.add_argument('-J', '--MMR', default=2, required=True, help='Expected number of DNA repair deficiency signatures.')
 parser.add_argument('--noweights', action='store_true', default=False, required=False, help='No weights for genomic regions, i.e. set W and R to 1. Do not optimalize W and R.')
 parser.add_argument('-t', '--tensorboard', required=False, help='path to tensorboard folder. tensorboard logging will be disabled if not specified')
 parser.add_argument('-s', '--logsuffix', required=False, help='optional suffix to attach to the log counter in tensorboard')
