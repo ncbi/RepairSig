@@ -58,4 +58,4 @@ RepairSig uses a default optimization strategy for its Adam optimizer as follows
 | 10000    | 0.01|
 | 10000    | 0.005 |
 
-It is possible to change this default behaviour by modifying the `config['optimizer_iterations']` and `config['optimizer_stepsize']` parameters in the python script respectively.
+It is possible to change this default behaviour by modifying the `config['optimizer_iterations']` and `config['optimizer_stepsize']` parameters in the python script respectively. 
