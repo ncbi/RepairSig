@@ -1,4 +1,4 @@
-# RepairSig (new version on 4/10/2021!)
+# RepairSig (new version on 4/11/2021!)
 
 Reference implementation of RepairSig, a computational approach that accounts for the non-additivity of  DNA damage and repair processes by modeling the composition of primary mutagenic processes corresponding to DNA damage processes with normally functioning DNA repair mechanism and secondary mutagenic processes which correspond to the deficiency of the DNA repair mechanism. RepairSig assumes signatures of the primary processes are known while signatures of the secondary processes are to be inferred.
 
