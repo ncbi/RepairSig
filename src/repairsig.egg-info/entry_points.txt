@@ -1,0 +1,3 @@
+[console_scripts]
+repairsig = repairsig.repairsig:run
+
