@@ -17,7 +17,7 @@ Clone the repository to a local folder, then use pip to install the package loca
 ```bash
 git clone https://github.com/ncbi/RepairSig.git
 cd RepairSig
-pip install ./
+pip install -e ./
 
 repairsig -h
 ```
