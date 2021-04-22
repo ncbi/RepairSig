@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: repairsig
-Version: 0.0.post1.dev22+gb78fa31.d20210422
+Version: 0.0.post1.dev24+g9468c0a.d20210422
 Summary: RepairSig is a computational approach that accounts for the non-additivity of DNA damage and repair processes by modeling the composition of primary mutagenic processes corresponding to DNA damage processes with normally functioning DNA repair mechanism and secondary mutagenic processes which correspond to the deficiency of the DNA repair mechanism.
 Home-page: https://github.com/ncbi/RepairSig
 Author: "Jan Hoinka, Damian Wójtowicz"

@@ -328,7 +328,7 @@ class Resources(object):
             # initialize with random data
             q = pd.DataFrame(   np.random.rand(self.args.numsec, self.M[0][1].shape[1]), # since the dimension of q in this case depends on knowing the number of categories, we source it from M
                                 columns=self.M[0][1].columns,
-                                index=[f"RepairSig_p{x+1}" for x in range(self.args.numsec)]
+                                index=[f"RepairSig_s{x+1}" for x in range(self.args.numsec)]
                             )
 
             # cast to float

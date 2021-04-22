@@ -1,6 +1,13 @@
 # RepairSig
 
-Reference implementation of RepairSig, a computational approach that accounts for the non-additivity of  DNA damage and repair processes by modeling the composition of primary mutagenic processes corresponding to DNA damage processes with normally functioning DNA repair mechanism and secondary mutagenic processes which correspond to the deficiency of the DNA repair mechanism. RepairSig assumes signatures of the primary processes are known while signatures of the secondary processes are to be inferred.
+Reference implementation of RepairSig, a computational approach that
+accounts for the non-additivity of  DNA damage and repair processes by
+modeling the composition of primary mutagenic processes corresponding to
+DNA damage processes with normally functioning DNA repair mechanism and
+secondary mutagenic processes which correspond to the deficiency of the
+DNA repair mechanism. RepairSig assumes signatures of the primary
+processes are known while signatures of the secondary processes are to be
+inferred.
 
 
 ## Prerequisites
@@ -90,9 +97,8 @@ Optimizer options (all or none are required):
                         List of optimizers to use in each bracket defined with
                         -e. List must be of same size as -e and -s
 
-Args that start with '--' (eg. -M) can also be set in a config file
-(/gpfs/gsfs7/users/hoinkaj/MutationalSignatures/RepairSig Reference
-Implementation/src/repairsig/data/default.conf or specified via -c). Config
+Args that start with '--' (eg. --matrix) can also be set in a config file
+(./src/repairsig/data/default.conf or specified via -c). Config
 file syntax allows: key=value, flag=true, stuff=[a,b,c] (for details, see
 syntax at https://goo.gl/R74nmi). If an arg is specified in more than one
 place, then commandline values override config file values which override
@@ -101,8 +107,23 @@ defaults.
 
 
 ## Example
-Coming soon.
 
+To apply RepairSig on BRCA whole-genome sequencing data (Nik-Zainal et al., Nature 2016) with local regional activity using
+
+* strand-specific direction of gene transcription, run
+```
+repairsig -c test_data/BRCA_T.conf -J 2 -O output_T
+```
+* discretized replication timing data, run
+```
+repairsig -c test_data/BRCA_RT.conf -J 2 -O output_RT
+```
+
+Most input and parameters of the model (e.g. mutation counts, primary signatures) are defined in the provided config files via -c.
+The number of secodary signatures to be inferred, here, is 2.
+
+## Citation
+[Damian Wojtowicz, Jan Hoinka, Bayarbaatar Amgalan, Yoo-Ah Kim, Teresa M. Przytycka, ''RepairSig: Deconvolution of DNA damage and repair contributions to the mutational landscape of cancer'', bioRxiv, 2020](https://doi.org/10.1101/2020.11.21.392878)
 
 ## Note
 This project has been set up using PyScaffold 4.0. For details and usage
