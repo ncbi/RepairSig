@@ -123,7 +123,7 @@ Most input and parameters of the model (e.g. mutation counts, primary signatures
 The number of secodary signatures to be inferred, here, is 2.
 
 ## Citation
-[Damian Wojtowicz, Jan Hoinka, Bayarbaatar Amgalan, Yoo-Ah Kim, Teresa M. Przytycka, ''RepairSig: Deconvolution of DNA damage and repair contributions to the mutational landscape of cancer'', bioRxiv, 2020](https://www.biorxiv.org/content/10.1101/2020.11.21.392878v1)
+Damian Wojtowicz, Jan Hoinka, Bayarbaatar Amgalan, Yoo-Ah Kim, Teresa M. Przytycka, [RepairSig: Deconvolution of DNA damage and repair contributions to the mutational landscape of cancer](https://www.biorxiv.org/content/10.1101/2020.11.21.392878v1), bioRxiv, 2020.
 
 ## Note
 This project has been set up using PyScaffold 4.0. For details and usage
