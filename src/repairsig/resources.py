@@ -81,7 +81,7 @@ class Resources(object):
         for i,f in enumerate(files):
             m = pd.read_csv(f,
                             sep = self.args.delimiter,
-                            header = 0 if self.args.labels else None,    # Take care of the labels flag
+                            header = 0 if self.args.labels else None,     # Take care of the labels flag
                             index_col = 0 if self.args.labels else False #
                 )
 
@@ -89,6 +89,11 @@ class Resources(object):
             if not self.args.labels:
                 m.columns = [f"mut_cat_{x+1}" for x in range(m.shape[1])]
                 m.index = [f"genome_{x+1}" for x in range(m.shape[0])]
+
+            # Cast to float
+            m = m.astype(np.float64, copy=False, errors='raise')
+
+            _logger.debug(m)
 
             _logger.debug(f"Got M_{i} with shape {m.shape}")
 
@@ -141,6 +146,9 @@ class Resources(object):
                             index_col = 0 if self.args.labels else False #
                 )
 
+            # cast to float
+            p = p.astype(np.float64, copy=False, errors='raise')
+
             # If no labels were specified by the user, add generic ones
             if not self.args.labels:
                 p.columns = [f"mut_cat_{x+1}" for x in range(p.shape[1])]
@@ -168,6 +176,9 @@ class Resources(object):
                                 columns=self.M[0][1].columns,
                                 index=[f"RepairSig_p{x+1}" for x in range(self.args.numpri)]
                             )
+
+            # cast to float
+            p = p.astype(np.float64, copy=False, errors='raise')
 
             # add to dictionary
             self.P['inferred'] = p
@@ -209,6 +220,9 @@ class Resources(object):
                             index=pri_sigs_index
                         )
 
+        # cast to float
+        w = w.astype(np.float64, copy=False, errors='raise')
+
         # add to dictionary
         self.W = w
 
@@ -239,6 +253,9 @@ class Resources(object):
                             index=self.M[0][1].index,
                             columns=pri_sigs_columns
                         )
+
+        # cast to float
+        a = a.astype(np.float64, copy=False, errors='raise')
 
         # add to dictionary
         self.A = a
@@ -288,6 +305,9 @@ class Resources(object):
                 q.columns = [f"mut_cat_{x+1}" for x in range(q.shape[1])]
                 q.index = [f"fixed_sig_{x+1}" for x in range(q.shape[0])]
 
+            # cast to float
+            q = q.astype(np.float64, copy=False, errors='raise')
+
             # Sanity check: the number of mutational categories must be identical to the one in M
             if self.M[0][1].shape[1] != q.shape[1]:
                 _logger.critical(f"The number of mutational signatures of M and Q must be identical. Currently, M has {self.M[0][1].shape[0]}, and Q has {q.shape[1]} signatures. Exiting.")
@@ -310,6 +330,9 @@ class Resources(object):
                                 columns=self.M[0][1].columns,
                                 index=[f"RepairSig_p{x+1}" for x in range(self.args.numsec)]
                             )
+
+            # cast to float
+            q = q.astype(np.float64, copy=False, errors='raise')
 
             # add to dictionary
             self.Q['inferred'] = q
@@ -351,6 +374,9 @@ class Resources(object):
                             index=sec_sigs_index
                         )
 
+        # cast to float
+        r = r.astype(np.float64, copy=False, errors='raise')
+
         # add to dictionary
         self.R = r
 
@@ -381,6 +407,9 @@ class Resources(object):
                             index=self.M[0][1].index,
                             columns=col_names
                         )
+
+        # cast to float
+        d = d.astype(np.float64, copy=False, errors='raise')
 
         # add to dictionary
         self.D = d

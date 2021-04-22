@@ -1,34 +1,13 @@
 Metadata-Version: 2.1
 Name: repairsig
-Version: 0.2.post1.dev1+g24e3132.d20210406
+Version: 0.0.post1.dev22+gb78fa31.d20210422
 Summary: RepairSig is a computational approach that accounts for the non-additivity of DNA damage and repair processes by modeling the composition of primary mutagenic processes corresponding to DNA damage processes with normally functioning DNA repair mechanism and secondary mutagenic processes which correspond to the deficiency of the DNA repair mechanism.
 Home-page: https://github.com/ncbi/RepairSig
 Author: "Jan Hoinka, Damian Wójtowicz"
 Author-email: "jan.hoinka@nih.gov, damian.wojtowicz@nih.gov"
 License: GPL_3.0_only
 Project-URL: Documentation, https://github.com/ncbi/RepairSig
-Description: =========
-        repairsig
-        =========
-        
-        
-        Add a short description here!
-        
-        
-        Description
-        ===========
-        
-        A longer description of your project goes here...
-        
-        
-        .. _pyscaffold-notes:
-        
-        Note
-        ====
-        
-        This project has been set up using PyScaffold 4.0. For details and usage
-        information on PyScaffold see https://pyscaffold.org/.
-        
+Description: UNKNOWN
 Platform: any
 Classifier: Development Status :: 4 - Beta
 Classifier: Programming Language :: Python
