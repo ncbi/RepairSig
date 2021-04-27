@@ -120,7 +120,7 @@ repairsig -c test_data/BRCA_RT.conf -J 2 -O output_RT
 ```
 
 Most input and parameters of the model (e.g. mutation counts, primary signatures) are defined in the provided config files via -c.
-The number of secodary signatures to be inferred, here, is 2.
+Here, the number of secodary signatures to be inferred is 2.
 
 ## Citation
 Damian Wojtowicz, Jan Hoinka, Bayarbaatar Amgalan, Yoo-Ah Kim, Teresa M. Przytycka, [RepairSig: Deconvolution of DNA damage and repair contributions to the mutational landscape of cancer](https://www.biorxiv.org/content/10.1101/2020.11.21.392878v1), bioRxiv, 2020.
